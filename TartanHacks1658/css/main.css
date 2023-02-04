@@ -1,0 +1,315 @@
+/* 
+NOTES ON YOUTUBE VIDEO: https://www.youtube.com/playlist?list=PL0eyrZgxdwhwP0AxnbBiDBCi53LK9uCMZ
+
+VIDEO-7 STYLING
+[html] <h1 class="heading">Dog Adoption</h1>
+[html] <div class="rectangle"></div>
+.heading {
+    color: coral;                                           | color
+    font-family: Georgia, 'Times New Roman', Times, serif;  | font
+    font-size: 80px;                                        | size
+    font-weight: 600;                                       | bold
+    font-style: italic;                                     | italize
+    text-align: center;                                     | align
+    text-decoration: none;                                  | underlined
+    text-transform: none;                                   | caplitalize
+    line-height: 80px;                                      | line height
+    word-spacing: 10px;                                     | word space
+    float: none;                                            | position align
+    z-index: 100;                                           | depth
+}  
+.rectangle {
+    width: 900px;                       | width
+    height: 100px;                      | height
+    background-color: dimgrey;          | color
+    margin: 10px 140px 600px 140px;     | margin (top right bottom left)
+    padding: 0 0 0 0;                   | padding (top right bottom left)   
+    float: none;                        | position align
+    z-index: 1000;                      | depth
+    border: blue solid 10px;            | border (color quality size)
+    cursor: pointer;                    | change when the mouse is staying
+    display: none;                      | not drawn
+    visibility: hidden;                 | drawn but not shown
+
+VIDEO-9 INSERT IMAGE
+body:after {
+    position: absolute;
+    width: 0;
+    height: 0;
+    overflow: hidden;
+    z-index: -1;
+    content: url(../img/adoption-home-bw.jpg) url(../img/adoption-home.jpg)
+}
+.background-class {
+    width: 100%;
+    height: 500px;
+    opacity: 80%;
+    background-image: url(../img/adoption-home.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.background-class:hover {
+    background-image: url(../img/adoption-home-bw.jpg);
+}
+} */
+body {
+    background-color: #4d7548;
+}
+.header-class {
+    width: 100%;
+    height: 70px;
+    background-color: #04331d;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: flex;
+    position: fixed;
+    z-index: 100;
+}
+.image-class {
+    width: 70px;
+}
+.homeB {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 25px;
+    font-weight: 600;
+    text-align: center;
+    line-height: 70px;
+    word-spacing: 0px;
+    color:#799964;
+    margin-left: 100pt;
+}
+.dogAdoptionB{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 25px;
+    font-weight: 600;
+    text-align: center;
+    line-height: 70px;
+    word-spacing: 0px;
+    color:#428d65;
+    margin-left: 40pt;
+}
+.dogAdoptionBB{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 25px;
+    font-weight: 600;
+    text-align: center;
+    line-height: 70px;
+    word-spacing: 0px;
+    color:#799964;
+    margin-left: 40pt;
+}
+/* ////////////////////////////////////////////////// */
+.heading-class {
+    color:#83a73f;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 150px;
+    font-weight: 600;
+    text-align: center;
+    text-shadow: 5px 5px #c0d09d;
+    position: absolute;
+    top: 30%;
+    left: 15%;
+    word-spacing: 10px;
+}
+.background-class {
+    width: 100%;
+    height: 800px;
+    opacity: 90%;
+    background-image: url(../img/adoption-home.jpg);
+    background-position: center;
+}
+.background-class:hover {
+    opacity: 80%;
+}
+.dogInfoB {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 25px;
+    font-weight: 600;
+    text-align: center;
+    line-height: 60px;
+    word-spacing: 0px;
+    color:#c0d09d;
+    background-color: #83a73f;
+    padding: 7px 100px;
+    cursor: pointer;
+}
+.dogInfoB:hover, .dogInfoB:focus {
+    background-color: #428d65;
+}
+.dropdown-class {
+    position: relative;
+    display: inline-block;
+}
+.dogInfo-class {
+    display: none;
+    background-color: #91ae84;
+    min-width: 230px;
+    cursor: pointer;
+}
+.dogInfo-class a {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 25px;
+    font-weight: 600;
+    text-align: center;
+    line-height: 60px;
+    word-spacing: 0px;
+    color: #007237;
+    display: block;
+}
+.dogInfo-class a:hover {background-color: #bfd1b1}
+  
+.show {display:block;}
+
+.createB {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 25px;
+    font-weight: 600;
+    text-align: center;
+    line-height: 70px;
+    word-spacing: 0px;
+    color:#bfd1b1;
+    background-color: #428d65;
+    padding: 12px 40px;
+}
+.createB:hover, .createB:focus {
+    background-color: #007d62;
+}
+
+/*  */
+* {
+    box-sizing: border-box;
+  }
+  
+form.example input[type=text] {
+    padding: 10px;
+    font-size: 17px;
+    border: 1px solid grey;
+    float: left;
+    width: 80%;
+    background: #f1f1f1;
+  }
+  
+
+form.example button {
+    float: left;
+    width: 20%;
+    padding: 10px;
+    background: #22b796;
+    color: white;
+    font-size: 17px;
+    border: 1px solid grey;
+    border-left: none;
+    cursor: pointer;
+  }
+  
+form.example button:hover {
+    background: #007D62;
+  }
+  
+
+form.example::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+
+.filterDiv {
+    float: left;
+    color: #ffffff;
+    width: 100px;
+    line-height: 100px;
+    text-align: center;
+    margin: 0px;
+    display: none;
+    position: relative;
+}
+
+.image {
+    width: 200px;
+    height: 200px;
+}
+
+.overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #24a826;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    transform: scale(0);
+    transition: .3s ease;
+}
+
+.filterDiv:hover .overlay {
+    transform: scale(1);
+    color: #000000;
+    opacity:0.8;
+}
+
+.text {
+    color: white;
+    font-size: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.show {
+    display: block;
+}
+
+.container {
+    margin-top: 20px;
+    overflow: hidden;
+}
+
+.btn-class {
+    border: none;
+    outline: none;
+    padding: 12px 16px;
+    width: 200px;
+    background-color: #f1f1f1;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #ddd;
+}
+
+.btn.active {
+    background-color: #666;
+    color: white;
+}
+
+.submit {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 25px;
+    font-weight: 600;
+    text-align: center;
+    line-height: 70px;
+    word-spacing: 0px;
+    color:#bfd1b1;
+    background-color: #428d65;
+    padding: 12px 40px;
+}
+
+.submit:hover {
+    opacity:0.7;
+}
+
+.text1 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 25px;
+    font-weight: 600;
+    text-align: center;
+    line-height: 70px;
+    word-spacing: 0px;
+    color: #2d5907;
+    background-color: #cfefdc;
+    padding: 12px 40px;
+}

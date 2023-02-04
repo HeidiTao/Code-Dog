@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <title>Upload multiple files</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+
+<form>
+  <textarea class="text1" name="Text1" cols="40" rows="5" style="border:none; position: absolute; top:20%; left:25%;"></textarea>
+  <p><input class="file" type="file"  accept="image/*" name="dogImage" id="dogI" onchange="loadFile(event)"
+            style="display:block;border:none; position:relative; left:33%; bottom:100%;" multiple="multiple"></p>
+  <p><img id='output' width="200" /></p>
+  <br>
+
+  <input class="submit" type="submit" value="Submit" style = "border:none; position: absolute; top:70%; left:42%">
+</form>
+<button id = "Home" onclick="location.href = 'Home.html'" class="hmtn"
+        style = " background-color: #91ae84;color: #29441c;border:none;position:fixed;
+        top:28px;right:1200px;width:8%;height:8%;font-size:30px;">Home</button>
+<script>
+  var loadFile = function(event) {
+    var image = document.getElementById('output');
+    for (let i = 0; i < event.target.length(); i++){
+      image.src=URL.createObjectURL(event.target.files[i]);
+    }
+  };
+  </script>
+
+</body>
+</html>

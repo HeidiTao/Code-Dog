@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dog Adoption</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<!--
+NOTES ON YOUTUBE VIDEO: https://www.youtube.com/playlist?list=PL0eyrZgxdwhwP0AxnbBiDBCi53LK9uCMZ
+
+<body>
+
+VIDEO-3 HOW TO STRUCTURE
+    <div></div>         | for all structures
+    <header></header>   | for header
+    <nav></nav>         | for nevigation
+    <main></main>       | for main paragraph
+    <section></section> | for section
+    <article></article> | for article
+    <aside></aside>     | for side bar
+    <footer></footer>   | for footer
+
+VIDEO-4 TITLES AND PARAGRAPHS
+    <h1>Big Title</h1>          | create a title (h1-h6)
+    <h2>Small Title</h2>        | create a smaller title 
+    <p>start <br> here</p>      | create a paragraph with line change
+
+VIDEO-5 HOW TO NAVIGATE BETWEEN PAGES
+    <a href="currentpage.html">this is a link</a>               | current page
+    <a target="_blank" href="newpage.html">this is a link</a>   | new page
+
+VIDEO-6 ADD STYLING
+    <div><p>start <span> here</span></p></div>
+    [css] div p span {color: blue;}             | change color (partial)
+    <p id="styling">start here</p>
+    [css] .styling {color: blue;}               | change color (unique)
+    <p class="styling1">start here</p>
+    <h1 class="styling1">Big Title</h1>
+    <h2 class="styling2">Small Title<h2>
+    [css] .styling1 {color: blue;}              | change color (multiple)
+    [css] body .styling2 {font-size: 70px;}     | change size (universal)
+
+</body>
+-->
+
+<body>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <header class="header-class">
+        <button class="homeB" onclick="location.href='home.html'">Home</button>
+        <div class="dogAdoptionB">Dog Adoption</div>
+        <img class="image-class" src="img/scotty.jpg" alt="logo" style="position:relative; top:0; right:28%">
+    </header>
+    <!-- #################################### -->
+    <div class="background-class">
+        <h1 class="heading-class">Dog Adoption</h1>
+        <div class="dropdown-class" style="position:relative; top:60%;left:25%">
+            <button class="dogInfoB" onclick="dogInfo()">Dog Info</button>
+            <div id="dogInfo-id" class="dogInfo-class">
+            <a href="breed.html">Breed</a>
+            <a href="#gender">Sex</a>
+            <a href="#age">Age</a>
+            </div>
+        <div class="dropdown-class" style="position:absolute; top:0; left:110%">
+            <button class="dogInfoB" >Location</button>
+            <form class="example" action="www.google.com">
+                <input type="text" placeholder="Search.." name="search">
+                <button type="submit"><i class="fa fa-search"></i></button>
+            </form>
+            </div>
+        <button class="createB" onclick="location.href='post.html'" style="position:absolute; bottom:490%; right:260%">Create+</button>
+    </div>
+    <!-- #################################### -->
+    <!-- #################################### -->
+    <!-- <div style = "position:absolute; top:175px; left:150px" id="myBtnContainer">
+        <button class="btn-class active" onclick="filterSelection('all')">Show all</button>
+        <button class="btn-class" onclick="filterSelection('breed')">Cars</button>
+        <button class="btn-class" onclick="filterSelection('animals')"> Animals</button>
+        <button class="btn-class" onclick="filterSelection('senior dog')"> Senior Dog</button>
+        <button class="btn-class" onclick="filterSelection('puppy')"> Puppy</button>
+    </div> -->
+
+    <!-- #################################### -->
+    <!-- <div style = "position:absolute; top:300px; left:100px" class="container">
+        <div class="filterDiv car" style="width:200px;height:200px">
+            <img src="puppy.jpeg" alt="Avatar" class="filterDiv puppy" style="width:200px;height:200px">
+            <div class="overlay">
+                <div class="text">$11/hr</div>
+            </div>
+        </div>
+        <div class="filterDiv senior dog" style="width:200px;height:200px">
+            <img src="senior dog.jpeg" alt="Avatar" class="filterDiv senior dog" style="width:200px;height:200px">
+            <div class="overlay">
+                <div class="text">$10/hr</div>
+            </div>
+        </div>
+        <div class="filterDiv puppy" style="width:200px;height:200px">
+            <img src="puppy.jpeg" alt="Avatar" class="filterDiv puppy" style="width:200px;height:200px">
+            <div class="overlay">
+                <div class="text">$9/hr</div>
+            </div>
+        </div>
+        <div class="filterDiv senior dog" style="width:200px;height:200px">
+            <img src="senior dog.jpeg" alt="Avatar" class="filterDiv senior dog" style="width:200px;height:200px">
+            <div class="overlay">
+                <div class="text">$12/hr</div>
+            </div>
+        </div>
+    </div> -->
+
+    <!-- #################################### -->
+    <!-- #################################### -->
+    <!-- <script>
+        filterSelection("all")
+        function filterSelection(c) {
+            var x, i;
+            x = document.getElementsByClassName("filterDiv");
+            if (c == "all") c = "";
+            for (i = 0; i < x.length; i++) {
+                w3RemoveClass(x[i], "show");
+                if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+            }
+        }
+    
+        function w3AddClass(element, name) {
+            var i, arr1, arr2;
+            arr1 = element.className.split(" ");
+            arr2 = name.split(" ");
+            for (i = 0; i < arr2.length; i++) {
+                if (arr1.indexOf(arr2[i]) == -1) {element.className += " " + arr2[i];}
+            }
+        }
+    
+        function w3RemoveClass(element, name) {
+            var i, arr1, arr2;
+            arr1 = element.className.split(" ");
+            arr2 = name.split(" ");
+            for (i = 0; i < arr2.length; i++) {
+                while (arr1.indexOf(arr2[i]) > -1) {
+                    arr1.splice(arr1.indexOf(arr2[i]), 1);
+                }
+            }
+            element.className = arr1.join(" ");
+        }
+        
+        var btnContainer = document.getElementById("myBtnContainer");
+        var btns = btnContainer.getElementsByClassName("btn");
+        for (var i = 0; i < btns.length; i++) {
+            btns[i].addEventListener("click", function(){
+                var current = document.getElementsByClassName("active");
+                current[0].className = current[0].className.replace(" active", "");
+                this.className += " active";
+            });
+        }
+    </script> -->
+    <!-- #################################### -->
+    <script>
+        function dogInfo() {
+        document.getElementById("dogInfo-id").classList.toggle("show");
+        }
+    </script>
+</body>
+
+</html>
